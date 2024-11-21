@@ -2,10 +2,9 @@
   margin:0;
   padding: 0;
   box-sizing: border-box;
-
 }
+
 body{
-  
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   background: #000;
@@ -60,30 +59,35 @@ body{
       linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0
         #282828;
     background-size: 40px 60px;
-  }/*Hemos elegido esto para en el caso de que haya un error cargando fondos que haya un diseño */
+}/*Hemos elegido esto para en el caso de que haya un error cargando fondos que haya un diseño */
   
-  body{
-    margin: none;
-  }
+body{
+  margin: none;
+}
+ 
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #071729;
+  border-bottom: 2px solid #113a5c ;
+  margin: none;
+}
 
-  .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: #071729;
-    border-bottom: 2px solid #113a5c ;
-    margin: none;
-  }
-  .nav-links{
-    text-decoration: none solid rgb(255, 255, 255);
-    padding: 8px 16px;
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 400;
-  }
-  .picture{
-    position: relative;
-    width:100%;
-    object-fit: cover;
-  }
+.logo{
+  width: 100%;
+}
+
+.nav-links{
+  text-decoration: none solid rgb(255, 255, 255);
+  padding: 8px 16px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.picture{
+  position: relative;
+  width:100%;
+}
