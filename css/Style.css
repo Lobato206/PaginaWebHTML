@@ -4,12 +4,14 @@
   box-sizing: border-box;
 
 }
+/* esto es para resetear todos los estilos existentes*/
 body{
   
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   background: #000;
-}
+  height: 100%;
+}/*para declarar que vamos a usar principalmente esta fuente*/
 
 
 
@@ -74,7 +76,7 @@ body{
     display: flex;
     align-items: center;
    
-  }
+  }/*para ajustar el logo*/
   span.Titulo{
     color:white;
     text-align: center;
@@ -83,7 +85,7 @@ body{
     margin-left: 20px;
     font-size: 200%;
 
-  }
+  }/*para ajustar el titulo de la empresa al lado del logo*/
   .navbar{
     display: flex;
     justify-content: space-between;
@@ -93,7 +95,7 @@ body{
     border-bottom: 2px solid #113a5c ;
     margin: none;
     text-decoration: none;
-  }
+  }/* para ajustar la barra de navegacion y sus contenidos*/
 
   .nav-links a{
     text-decoration: none;
@@ -106,4 +108,178 @@ body{
 
   .nav-links a:hover{
     color: #ffae00;
+  }/*para ajustar el texto y generar una pequeña animación a la hora de poner el boton encima*/
+
+
+
+  .main-content{
+
+    background: linear-gradient( rgba(0, 0, 0, 0.925),rgba(0, 0, 0, 0.425),rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/backgound_index.jpg) no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    text-align: center;
+  }/*para hacer que la imagen se ajuste automaticamente independientemente del tamaño de la pantalla y que tenga un degradado*/
+
+ 
+  .texto-section{
+    margin-top: 7%;
+    
   }
+
+  .texto-section h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .cta-button{
+    background: #cf6f15;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5%;
+    transition: backgroud 0.3 ease;
+  }
+
+  .cta-button:hover{
+    background: #eb924a;
+  }
+
+
+  /*Toda esta rama de efectos es para un boton, genera como el efecto glitch y lo he implementado
+  por probar algo distinto.*/
+  a.Effect,a ::after{
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: orange;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a.Effect::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'Entra a nuestra comunidad';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  a.Effect:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+  }
+  
+  a.Effect:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  }
+  
+  a.Effect:hover {
+    background-color: orange;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+  
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+  
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+  
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+  
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+  
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+  
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+  
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+  
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+  
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+  /*Aqui termina la rama de efectos de un boton*/
+.info-section{
+  display: flex;
+  justify-content: space-evenly;
+  background: #000;
+  padding: 20px 0;
+  border-top: 2px solid #113a5c;
+}
+
+.info.box{
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  border-left: 1px solid #113a5c;
+  
+}
+.info-box:first-child{
+  border-left: none;
+}
+
+.info-box a{
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.info-box a:hover{
+  color: #ffae00;
+}
