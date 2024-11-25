@@ -133,7 +133,15 @@ body{
     text-align: center;
   }/*para hacer que la imagen se ajuste automaticamente independientemente del tamaño de la pantalla y que tenga un degradado*/
 
- 
+  .main-tienda{
+
+    background: rgb(92, 195, 255);
+    height: 90vh;
+    display: flex;
+    align-items:start;
+    text-align: center;
+  }/*para hacer que la imagen se ajuste automaticamente independientemente del tamaño de la pantalla y que tenga un degradado*/
+
   .texto-section{
     margin-top: 7%;
     
@@ -294,3 +302,20 @@ body{
 .info-box a:hover{
   color: #ffae00;
 }
+
+.Productos{
+  display: flex;
+  flex-direction: column;
+  
+}
+.Producto div{
+  background: #eb924a;
+  width: 150px;
+  height: 150px;
+  margin: 2.5%;
+}
+.ImagenProducto img{
+  width: 80%;
+  height: 80%;
+}
+
