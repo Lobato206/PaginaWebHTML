@@ -1,3 +1,8 @@
+:root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
 *{
   margin:0;
   padding: 0;
@@ -135,8 +140,9 @@ body{
 
   .main-tienda{
 
-    background: rgb(92, 195, 255);
-    height: 90vh;
+    background: rgba(92, 195, 255, 0.144);
+    min-height: 90vh;
+    max-height: max-content;
     display: flex;
     align-items:start;
     text-align: center;
@@ -169,7 +175,17 @@ body{
 
   /*Toda esta rama de efectos es para un boton, genera como el efecto glitch y lo he implementado
   por probar algo distinto.*/
-  a.Effect,a ::after{
+  a.Effect{
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: orange;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a.Effect ::after{
     padding: 10px 50px;
     font-size: 20px;
     border-radius: 5px;
@@ -303,19 +319,131 @@ body{
   color: #ffae00;
 }
 
+/*Aqui empiezan elementos adicionales de la tienda*/
 .Productos{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
   
 }
-.Producto div{
-  background: #eb924a;
-  width: 150px;
-  height: 150px;
-  margin: 2.5%;
+div.Producto {
+ 
+  width: 200px;
+  height: 250px;
+  margin: 1.5%;
+  display: grid;
+ 
 }
 .ImagenProducto img{
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
+
+.tituloProducto{
+  margin-bottom: 0%;
+}
+
+a.tienda{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**/
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+  border-radius: 5px;
+}
+.cover-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.wrapper{
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-radius: 5px;
+}
+.card:hover .wrapper{
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow:2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+.wrapper::before,
+.wrapper::after{
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+}
+.wrapper::before{
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5)68%,
+      rgba(12, 13, 19) 97%
+  );
+  border-radius: 5px;
+}
+.wrapper::after{
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19)97%
+  );
+  border-radius: 5px;
+}
+.card:hover .wrapper::before,
+.wrapper::after{
+  opacity: 1;
+}
+.card:hover .wrapper::after{
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+
 
