@@ -346,13 +346,23 @@ div.Producto {
   margin-bottom: 0%;
 }
 
+/**/
+
+
 a.tienda{
   margin:0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  display: grid;
+  margin-bottom: 15px;
+  align-items: center;
 }
 
-/**/
+
 
 .card {
   width: var(--card-width);
@@ -378,6 +388,7 @@ a.tienda{
   width: 100%;
   z-index: -1;
   border-radius: 5px;
+  margin-bottom: 5px;
 }
 .card:hover .wrapper{
   transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
