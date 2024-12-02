@@ -166,7 +166,11 @@ body{
 
   }/*comunidad de la pagina*/
 
+  .main-sobrenosotros{
+    min-height: 90vh;
+    max-height: max-content;
 
+  }
 
 
   .texto-section{
@@ -709,12 +713,12 @@ a.tienda{
 }
 
 .sobre-nosotros .p:hover {
-  color: #00ffff; /* Azul neón */
+  color: #0571ec;
 }
 
 /* Efecto de difuminado dinámico */
 .sobre-nosotros .difuminado {
-  background: linear-gradient(135deg, #00ffff, #1e1e1e);
+  background: linear-gradient(135deg, #e24c0c, #1e1e1e);
   padding: 20px;
   border-radius: 10px;
   transition: background 0.5s, transform 0.5s;
@@ -740,8 +744,8 @@ a.tienda{
 
 .sobre-nosotros .seccion:hover {
   background-color: #0062ff; /* Azul neón */
-  border-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Sombra azul neón */
+  border-color: #e24c0c;
+  box-shadow: 0 0 15px rgba(253, 132, 20, 0.897); /* Sombra azul neón */
 }
 
 /* Enlaces */
