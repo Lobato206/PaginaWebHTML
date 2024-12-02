@@ -156,6 +156,19 @@ body{
     text-align: center;
   }/*para hacer que la imagen se ajuste automaticamente independientemente del tamaño de la pantalla y que tenga un degradado*/
 
+  .main-comunidad{
+
+    background: rgb(0, 0, 0);
+    padding: 2rem;
+    min-height: 90vh;
+    max-height: max-content;
+    align-items: center;
+
+  }/*comunidad de la pagina*/
+
+
+
+
   .texto-section{
     margin-top: 7%;
     
@@ -647,6 +660,53 @@ a.tienda{
   opacity: 0.1;
   z-index: 1;
 }
+/* Aqui acaba tienda*/
+
+
+/* Aqui empieza comunidad*/
+.comunidad-contenido{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.comunidad-item{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  min-height: 35vh;
+  max-height: max-content;
+}
+.comunidad-item h2{
+  color: #ffae00;
+  font-size: 1.8rem;
+  color: #ffae00;
+  margin: 1rem;
+}
+.comunidad-item ul{
+  list-style: none;
+  padding: 25px;
+}
+.comunidad-item ul li{
+  margin-bottom: 1rem;
+}
+
+.comunity-image{
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+.comunity-text{
+  max-width: 600px;
+}
+
+
 
 /* Título */
 .sobre-nosotros .h1 {
