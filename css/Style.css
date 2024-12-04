@@ -178,7 +178,6 @@ body{
 
   .main-trabajo{
     background: linear-gradient( rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75),rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/backgroun2.gif) no-repeat center center/cover;
-    height: 90vh;
     background-size: cover;
     height: 90vh;
     display: flex;
@@ -186,8 +185,25 @@ body{
     align-items:start;
     text-align: center;
     background: 100;
+    margin: 0px;
   
   }
+
+   
+  .main-Eventos {
+    background: url(../images/273018.jpg) no-repeat center center/cover; /* Ruta a tu imagen de fondo  '273018.jpg'*/
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Asegura que los cuadros no se envuelvan en una nueva línea */
+  }
+  
+
+
+
+
   .texto-section{
     margin-top: 7%;
     
@@ -759,3 +775,63 @@ a.tienda{
 }
 
 /*Fin Sobre nosotros*/
+
+/*Inicio proximos eventos*/
+
+
+ 
+  .evento {
+    background-color: #111010;
+    display: flex;
+    flex-direction: column;
+    align-items: horizontal;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(5, 52, 181);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 25%; /* Ajustar el ancho */
+    height: 200px; /* Ajustar la altura */
+    margin: 50px; /* Añadir margen para separar los cuadros */
+    border: 2px solid #ffffff; /* Borde de neón */
+    position: relative;
+  }
+  
+  .evento:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0916ca; /* Efecto de neón en hover */
+  }
+  
+  .evento img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid #ffffff; /* Marco interno para las fotos */
+    border-radius: 10px; /* Bordes redondeados para las fotos */
+  }
+  
+  .info {
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.842);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .evento:hover .info {
+    transform: translateY(0);
+  }
+  
+  .info h2 {
+    margin: 0 0 10px;
+  }
+  
+  .info p {
+    margin: 0;
+  }
+  
+/*Fin Proximos
