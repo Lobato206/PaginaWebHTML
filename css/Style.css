@@ -136,6 +136,7 @@ body{
     color: white;
   }
 
+  /*Aqui empieza una seccion en la que estan todos los main para tenerlos localizados todos juntos por si falla alguna cosa*/
   .main-content{
 
     background: linear-gradient( rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75),rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/backgound_index.jpg) no-repeat center center/cover;
@@ -154,7 +155,7 @@ body{
     display: flex;
     align-items:start;
     text-align: center;
-  }/*para hacer que la imagen se ajuste automaticamente independientemente del tamaño de la pantalla y que tenga un degradado*/
+  }
 
   .main-comunidad{
 
@@ -201,7 +202,7 @@ body{
   }
   
 
-
+  /*fin mains */
 
 
   .texto-section{
@@ -606,6 +607,7 @@ a.tienda{
   transform: translate3d(0%, -30%, 100px);
 }
 
+/*Fondo tienda*/
 .gradient-background {
   background: linear-gradient(100deg,#2c128a,#250520,#830505);
   background-size: 180% 180%;
@@ -623,10 +625,8 @@ a.tienda{
     background-position: 0% 50%;
   }
 }
-/* Estilo general para la sección */
 
 
-/* Efecto de partículas */
 
 /* Aqui acaba tienda*/
 
